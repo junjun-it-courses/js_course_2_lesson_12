@@ -6,13 +6,18 @@
 //     if(n === 1 || n === 0 ) {
 //         return 1;
 //     } else {
-//         console.log(n - 1);
 //         return n * factorial(n - 1);
 //     }
 //
 //
 // }
+//
+//
+//
 // factorial(4)
+
+
+
 // // console.log();
 //
 // factorial(4); // 24
@@ -21,22 +26,24 @@
 //             2 * factorial(1); // 2
 
 
+// 2 * 2 * (2 ** 3)
+
 
 function pow(num, exponent) {
-
     if(exponent === 1) {
-        return num;
-    } else {
-        return num * pow(num, exponent - 1);
+        return 1 ;
     }
+
+    return num * pow(num, exponent - 1);
 
 }
 
-console.log(pow(2, 4));
+pow(2, 5) // 2 * 2 * 2 * 2 * 2      = 32
+    2 * pow(2, 4) // 2 * 2 * 2 * 2  = 16
+         2 * pow(2, 3) // 2 * 2 * 2 = 8
+            2 * pow(2, 2) // 2 * 2  = 4
+                2 * pow(2, 1) // 2  = 2
 
-    pow(2, 4)
-        2 * pow(2, 3 - 1)
-            2 * pow(2, 2 - 1)
-                2 * pow(2, 1);
-
-
+console.log(2 ** 5)
+console.log(2 * 2 * 2 * 2 * 2)
+console.log(pow(2, 5))
